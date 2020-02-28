@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="appCtrl as app">
+
+<head>
+	<base href="/">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Department of Digital Signage Technology - Client Portal</title>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<!-- CSS -->
+<link rel="stylesheet" href="css/main.css">
+
+<!-- AJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+	
+<!-- Additional AJS Modules -->
+	<script src="js/angularjs/ui.router.js"></script>
+	<script src="http://code.angularjs.org/1.2.9/angular-animate.min.js"></script>
+
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+</head>
+
+<body>
+	<a ui-sref="infopg"> Open Me!</a>
+	<ui-view>
+		<!-- Route-specific html goes here. -->
+	</ui-view>
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+<!-- ------------------------------------------------------------------------------------------------->
+<!-- APP -->
+	<script src="app.js"></script>
+<!-- ROUTES -->
+	<script src="routes/infopg.js"></script>
+	<script src="directive/slider.js"></script>
+
+
+
+	
+
+</html>
