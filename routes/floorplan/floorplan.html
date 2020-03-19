@@ -1,0 +1,47 @@
+<div id="floorplan" ng-contoller="floorCtrl as floor">
+    <!-- <div class="dot" ng-click="floor.currentSlide(2)"></div>
+    <div class="dot" ng-click="floor.currentSlide(1)"></div> -->
+    <div class="floor-contain">
+   <img ng-src="{{app.images + 'floorplan.jpg'}}" alt="2nd Floor map" class="plans">
+    <!-- <img ng-src="{{app.images + 'floorplan.jpg'}}" alt="2nd Floor map" class="plans"> -->
+    <!-- <img ng-repeat="x in floor.images" ng-src="{{x.src}}" alt="floor plans"> -->
+    
+    <div class="section" ng-model="collapse" ng-click="collapse=!collapse"></div>
+    <div class="section-2" ng-model="collapse2" ng-click="collapse2=!collapse2"></div>
+    <div class="section-3"></div>
+    <div class="section-4"></div>
+    <div class="section-5"></div>
+    <div class="section-6"></div>
+    <div class="section-7"></div>
+    <div class="section-8"></div>
+    <div class="section-9"></div>
+    <div class="section-10"></div>
+    <div class="section-11"></div>
+    </div>
+    <!-- <section class="wrapper"> -->
+
+    <img ng-src="{{app.icons + 'locator.svg'}}" alt="location icon" class="drop">
+    
+    <!-- </section> -->
+
+    <div class="floor-title">
+        <h1 class="floor-num">2nd</h1>
+        <div class="room-info" ng-if="collapse">
+            <p>{{floor.rooms[0].title}}</p>
+            <ul>
+                <li>{{floor.rooms[0].department}}</li>
+                <li>{{floor.rooms[0].person}}</li>
+                <li>{{floor.rooms[0].item}}</li>
+            </ul>
+        </div>
+
+        <!-- <div class="room-info" ng-if="collapse2">
+            <p>Office #5</p>
+            <ul>
+                <li>item 1</li>
+                <li>item 1</li>
+                <li>item 1</li>
+            </ul>
+        </div> -->
+    </div>
+</div>

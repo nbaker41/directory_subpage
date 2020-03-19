@@ -1,6 +1,13 @@
+@import//levels
+'levels/levels',
+'slider/slider',
+'breakpoints/breakpoints';
+
+
 body {
-    background: #b3a369;
+    background: #000000;
     background-size: cover;
+    color:#ffffff;
 
     #info {
 
@@ -31,7 +38,7 @@ body {
 
                     .hline {
                         margin-bottom:40px;
-                        border-bottom: 2px solid #000000;
+                        border-bottom: 2px solid #cccccc;
                     }
 
                     h1 {
@@ -53,6 +60,7 @@ body {
                         font-size: 5rem;
                         border:none;
                         background: transparent;
+                        color: #ffffff;
                     }
                 }
 
@@ -61,7 +69,7 @@ body {
 
             .vertline {
                 height: 1000px;
-                border-right: 2px solid black;
+                border-right: 2px solid #cccccc;
 
             }
 
@@ -113,3 +121,167 @@ body {
         }
     }
 }
+
+
+
+#flooricon{
+    width:150px;
+    height:150px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    bottom: 0;
+}
+
+
+#floorplan{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin: 5% 0;
+   
+   .floor-contain{
+        float:left;
+        margin-left: 10%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        overflow:hidden;
+    img{
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+  
+    .plans{
+        z-index: 0;
+        position: relative;
+        
+        
+    }
+}
+    // .dot{
+    //     cursor: pointer;
+    //     height:15px;
+    //     width:15px;
+    //     margin:8px 20px;
+    //     background-color:#fff;
+    //     border-radius:50%;
+    //     transition: background-color 0.6 ease;
+    //     left: 10px;
+    //     top:40px;
+    //     z-index:1;
+
+    //     &:hover{
+    //         background-color: #555;
+    //     }
+
+    // }
+    // .active{
+    //     background-color: #555;
+    // }
+    // .push{
+    //     animation-name:push;
+    //     animation-duration:3s;
+    // }
+// .wrapper{
+    
+    .drop{
+        width: 80px;
+        top:200px;
+        left:500px;
+        animation-name: pin;
+        animation-duration: 3s;
+        z-index:2;
+        position: absolute;
+     
+
+    
+    }
+    @keyframes pin{
+        0% {
+            left:500px;
+            top: -200px;
+        }
+        100% {
+            top:200px;
+
+        }
+    }
+
+    .section{
+        position: absolute;
+        width: 305px;
+        height:325px;
+        top:125px;
+        right:33.5%;
+        &:active{
+            background-color: #b3a369;
+            opacity: 0.4;
+        }
+       
+    }
+    .section-2{
+       
+        position: absolute;
+        width: 211px;
+        height:166px;
+        top:125px;
+        right:941px;
+        &:active{
+            background-color: #b3a369;
+            opacity: 0.4;
+        }
+        
+
+    }
+    
+    .section-3{
+        position: absolute;
+        width: 211px;
+        height:166px;
+        top:125px;
+        right:1209px;
+        &:active{
+            background-color: #b3a369;
+            opacity: 0.4;
+        }
+    }
+    // }
+    
+
+    .floor-title{
+        float:right;
+        margin-right:10%;
+        font-size: 45px;
+        // display:flex;
+        // align-items:flex-start ;
+        
+        .floor-num{
+            padding:0px;
+            margin:0px;
+            border-bottom: 2px solid #fff;
+    
+        }
+    
+        .room-info{
+            
+            p{
+                font-size: 25pt;
+            }
+            ul{
+               margin-top:0;
+            
+            li{
+                font-size: 18pt;
+                line-height: 2;
+            }
+        }
+        }
+       
+    
+    }
+      
+}
+
+

@@ -1,0 +1,9 @@
+<div id="slider">
+    <div class="slide" ng-repeat="x in app.images" ng-show="image.visible">
+         <img ng-src="{{x.src}}" alt="plans">
+    </div>
+    <div class="arrows">
+        <a href="#" ng-click="app.up()">&#10094;</a>
+        <a href="#" ng-click="app.down()">&#10095;</a>
+    </div>
+</div>

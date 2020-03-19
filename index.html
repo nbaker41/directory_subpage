@@ -11,7 +11,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <!-- CSS -->
 <link rel="stylesheet" href="css/main.css">
-
+<link rel="stylesheet" href="css/hover/hover.css">
+<link rel="stylesheet" href="random/random.css">
 <!-- AJS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
 	
@@ -19,12 +20,14 @@
 	<script src="js/angularjs/ui.router.js"></script>
 	<script src="http://code.angularjs.org/1.2.9/angular-animate.min.js"></script>
 
-
+	
 <!-- ----------------------------------------------------------------------------------------------- -->
 </head>
 
 <body>
-	<a ui-sref="infopg"> Open Me!</a>
+	<a ui-sref="info"> Open Me!   </a>
+	<a ui-sref="levels">  Levels  </a>
+	<a ui-sref="random">   Grid</a>
 	<ui-view>
 		<!-- Route-specific html goes here. -->
 	</ui-view>
@@ -36,8 +39,15 @@
 <!-- APP -->
 	<script src="app.js"></script>
 <!-- ROUTES -->
-	<script src="routes/infopg.js"></script>
-	<script src="directive/slider.js"></script>
+	<script src="routes/info/info.js"></script>
+	<script src="routes/floorplan/floorplan.js"></script>
+	<script src="routes/levels/levels.js"></script>
+
+
+	<script src="random/random.js"></script>
+
+	<!-- <script src="routes/sections/section.js"></script> -->
+	<!-- <script src="directive/slider/slider.js"></script> -->
 
 
 

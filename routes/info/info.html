@@ -1,4 +1,4 @@
-<div id="info" ng-controller="infopgCtrl as info">
+<div id="info" ng-controller="infoCtrl as info">
     <div class="info-container">
 
         <div class="personal-info">
@@ -11,7 +11,7 @@
                 <h3>Email: felicia.williams@gatech.edu</h3>
                 <h3>Room: 206</h3>
                 <h3>Floor: 2</h3>
-                <button class="back">&larr;</button>
+                <button class="back hvr-backward">&#10094;</button>
             </div>
         </div>
         <div class="vertline"></div>
@@ -27,8 +27,13 @@
                     events and opportunities that will help them become successful graduates.
                 </p>
             </div>
-            <div class="floorplan">
-                <!-- <img src="" alt=""> -->
+
+
+            <div class="flooricon">
+                <a ui-sref="floorplan" class="hvr-bob"><img ng-src="{{app.images +'location.png'}}" alt=""></a>
+            </div>
+            <!-- <div class="floorplan">
+                <img src="" alt=""> 
                 <div class="lvls">
                     <a class="level" ng-click="first()"></a>
                     <a class="level" ng-click="info.second()"></a>
@@ -36,12 +41,12 @@
                 </div>
                 <div class="space"></div>
                 <div class="plan">
-                    <!-- <img ng-src="/images/{{images.src}}"> -->
+                     <img ng-src="/images/{{images.src}}"> 
                     <img ng-repeat="x in info.images" ng-src="{{x.src}}"
                     ng-hide="!isCurrentSlideIndex($index)">
                 </div>
 
-            </div>
+            </div> -->
 
         </div>
 

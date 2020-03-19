@@ -4,9 +4,13 @@
 		// AJS modules
 		"ui.router",
 		//routes
-		"infopg",
+		"info",
+		"floorplan",
+		"levels",
 		//directive
-		"slider"
+		// "slider",
+		// "section"
+		"random"
 
 	]);
 
@@ -22,6 +26,8 @@
 			this.example = "Hello from AJS";
 			let app = this;
 
+			app.images = "../images/";
+			app.icons = "../icons/";
 			// transitions
 			$transitions.onSuccess({}, function ($transition) {
 				app.route = {};
@@ -33,5 +39,7 @@
 			});
 
 		});
+
+		
 
 })();
