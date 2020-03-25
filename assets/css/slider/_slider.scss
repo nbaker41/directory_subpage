@@ -1,6 +1,4 @@
-// html{
-// 
-// }
+
 .floor-slider{
     align-items: center;
     display: grid;
@@ -30,14 +28,42 @@
     border: 20px solid #1C1D21;
     height: 600px;
     overflow: hidden;
-    width: 1000px;
+    width: 800px;
     background-color: #fff;
   
-    img {
+    svg{
       height: 555px;
-      width: 1000px;
+      width: 800px;
       transition: all 1s;
-    }
+
+      .st0 {
+        display: none;
+      }
+
+      .st1 {
+        display: inline;
+      }
+
+      .st2 {
+        fill: transparent;
+        stroke: #000000;
+        stroke-width: 10;
+        stroke-miterlimit: 10;
+        pointer-events: all;
+
+        &:hover {
+          fill: #b3a369;
+        }
+        .st3 {
+          fill: none;
+          stroke: #000000;
+          stroke-width: 10;
+          stroke-miterlimit: 10;
+        }
+      }
+
+      
+      }
   }
 
 
@@ -56,7 +82,6 @@
     cursor: pointer;
     height: 50px;
     width:50px;
-    // padding: 15px;
     border: none;
     transition: background-color .5s, color .5s;
     font-size:30px;
@@ -95,34 +120,20 @@
 
 
 .lvl-info{
-  display:flex;
+  grid-column-start: 2;
+  grid-column-end:2;
   float: right;
   align-self: flex-start;
-
+  
+  
   .lvl-num {
     color: #fff;
     font-size: 100px;
-    // align-items
     border-bottom: solid 2px #fff;
   }
 
   .room-info{
     color:#fff;
-  }
-
-
-  .zone1{
-    position:absolute;
-    display:none;
-
-    &:hover{
-      background-color: #003057;
-      opacity: 0.5;
-    }
-    &:active{
-      background-color: #003057;
-      opacity:0.5;
-    }
   }
 }
 

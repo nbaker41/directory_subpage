@@ -6,11 +6,11 @@
 		//routes
 		"info",
 		"floorplan",
-		"levels",
+		"levels"
 		//directive
 		// "slider",
 		// "section"
-		"random"
+	
 
 	]);
 

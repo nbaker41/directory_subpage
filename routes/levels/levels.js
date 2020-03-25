@@ -7,7 +7,7 @@
 		$stateProvider.state(
 			'levels', {
 				url: '/levels',
-				templateUrl: '/routes/levels/levels.html',
+				templateUrl: 'routes/levels/levels.html',
 				controller: "levCtrl",
 				controllerAs: "lev"
 			})
@@ -19,26 +19,13 @@
 		function ($scope, $http) {
 			this.app = $scope.$parent.app;
             var lev = this;
-            
-            lev.images = [{
-				src: '../svg/floorplan.svg',
-				title: '1st'
-			},{
-				src: '../svg/floorplan2.svg',
-				title: '2nd'
-			},{
-				src: '../images/floorplan.jpg',
-				title: '3rd'
-            }]
-            
-            
-
+        
 			$("#Next").click(function(){
-                $("#Slider").append($("#Slider img:first-of-type"));
+                $("#Slider").append($("#Slider svg:first-of-type"));
             });
             
             $("#Prev").click(function(){
-                $("#Slider").prepend($("#Slider img:last-of-type"));
+                $("#Slider").prepend($("#Slider svg:last-of-type"));
             });
 
         });

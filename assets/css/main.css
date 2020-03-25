@@ -47,15 +47,42 @@
   border: 20px solid #1C1D21;
   height: 600px;
   overflow: hidden;
-  width: 1000px;
+  width: 800px;
   background-color: #fff;
 }
 
-.floor-slider #Wrapper #Slider img {
+.floor-slider #Wrapper #Slider svg {
   height: 555px;
-  width: 1000px;
+  width: 800px;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+.floor-slider #Wrapper #Slider svg .st0 {
+  display: none;
+}
+
+.floor-slider #Wrapper #Slider svg .st1 {
+  display: inline;
+}
+
+.floor-slider #Wrapper #Slider svg .st2 {
+  fill: transparent;
+  stroke: #000000;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+  pointer-events: all;
+}
+
+.floor-slider #Wrapper #Slider svg .st2:hover {
+  fill: #b3a369;
+}
+
+.floor-slider #Wrapper #Slider svg .st2 .st3 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
 }
 
 .floor-slider #Wrapper #Arrows {
@@ -99,9 +126,9 @@
 }
 
 .floor-slider .lvl-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 2;
   float: right;
   -ms-flex-item-align: start;
       align-self: flex-start;
