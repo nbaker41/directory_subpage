@@ -75,10 +75,16 @@
 }
 
 .floor-slider #Wrapper #Slider svg .st2:hover {
-  fill: #b3a369;
+  fill: #dac98d;
 }
 
-.floor-slider #Wrapper #Slider svg .st2 .st3 {
+.floor-slider #Wrapper #Slider svg .st2:active {
+  fill: #b3a369;
+  -webkit-animation: flicker 1s ease-in-out infinite;
+          animation: flicker 1s ease-in-out infinite;
+}
+
+.floor-slider #Wrapper #Slider svg .st3 {
   fill: none;
   stroke: #000000;
   stroke-width: 10;
@@ -91,7 +97,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 50px;
-  /* 	position: absolute; */
   float: left;
 }
 
@@ -125,23 +130,137 @@
   position: absolute;
 }
 
-.floor-slider .lvl-info {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-column-end: 2;
-  float: right;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.floor-slider h2 {
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 1px;
+  display: none;
 }
 
-.floor-slider .lvl-info .lvl-num {
-  color: #fff;
-  font-size: 100px;
-  border-bottom: solid 2px #fff;
+.floor-slider h2.show {
+  display: block;
 }
 
-.floor-slider .lvl-info .room-info {
+.floor-slider div,
+.floor-slider ul {
+  display: block;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.floor-slider .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.floor-slider .main .directory {
+  overflow-y: auto;
+  width: 250px;
+}
+
+.floor-slider .main ul {
+  list-style: none;
+  width: 100%;
+  overflow: hidden;
+}
+
+.floor-slider .main ul .rooms {
+  display: block;
+}
+
+.floor-slider .main ul li {
+  display: block;
+}
+
+.floor-slider .main ul li .show {
+  display: block;
+}
+
+.floor-slider .main ul li a {
+  padding: 5px;
+  text-decoration: none;
   color: #fff;
+  background: transparent;
+  width: 100%;
+  display: inline-block;
+  line-height: 1.3em;
+  font-size: 13px;
+}
+
+.floor-slider .main ul li a .active {
+  background: #b3a369;
+}
+
+.floor-slider .main ul a::before {
+  content: "(" attr(href) ") - ";
+  height: 23px;
+  float: left;
+}
+
+.floor-slider input[type=search] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 96%;
+  margin: 5px 2%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ddd;
+  color: #fff;
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes location {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes location {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 body {

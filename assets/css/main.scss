@@ -1,5 +1,6 @@
 @import//levels
 'levels/levels',
+// 'hover/hover.css',
 'slider/slider';
 // 'breakpoints/breakpoints';
 
@@ -76,8 +77,8 @@ body {
             .bio {
                 grid-column-start: 3;
                 grid-column-end: 5;
-
                 padding: 0 70px;
+
                 p{
                     font-size: 1.5rem;
                     line-height: 1.3;

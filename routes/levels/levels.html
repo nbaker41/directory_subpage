@@ -1,6 +1,6 @@
 <div class="floor-slider" ng-contoller="levCtrl as lev">
 
-  <section id="Wrapper">
+  <div id="Wrapper">
 
     <div id="Arrows">
       <button id="Prev" aria-hidden="true">&#10094;</button><br />
@@ -13,7 +13,7 @@
       <div id="Slider">
 
         <!-- FLOOR 1-->
-        <svg  x="0px" y="0px" viewBox="0 0 1085 703" >
+        <svg  x="0px" y="0px" viewBox="0 0 1085 703" id="F1" >
 
 
           <g class="st0">
@@ -42,19 +42,18 @@
           <g>
             <polygon class="st2"
               points="838.9,210.1 838.9,493.7 501,493.7 501,641.7 95.8,641.7 95.8,288.3 445.3,288.3 445.3,210.1 	" />
-            <rect x="95.8" y="61.3" class="st2" width="349.5" height="227.1" />
-            <rect x="642.1" y="61.3" class="st2" width="196.8" height="148.8" />
-            <rect x="445.3" y="61.3" class="st2" width="196.8" height="148.8" />
-            <rect x="838.9" y="300.7" class="st2" width="150.3" height="193" />
-            <rect x="838.9" y="61.3" class="st2" width="150.3" height="239.5" />
-            <rect x="501" y="493.7" class="st2" width="488.2" height="148" />
+            <rect id="101" x="95.8" y="61.3" class="st2" width="349.5" height="227.1" ng-model="open" ng-click="open=!open" />
+            <rect id="102" x="642.1" y="61.3" class="st2" width="196.8" height="148.8" ng-model="open2" ng-click="open2=!open2"/>
+            <rect id="103" x="445.3" y="61.3" class="st2" width="196.8" height="148.8" />
+            <rect id="104" x="838.9" y="300.7" class="st2" width="150.3" height="193" />
+            <rect id="105" x="838.9" y="61.3" class="st2" width="150.3" height="239.5" />
+            <rect id="106" x="501" y="493.7" class="st2" width="488.2" height="148" />
           </g>
         </svg>
 
         
  <!--FLOOR 2-->
-        <svg  x="0px" y="0px"
-          viewBox="0 0 1085 703">
+        <svg  x="0px" y="0px" viewBox="0 0 1085 703" id="F2">
           <g class="st0">
             <g class="st1">
               <polygon
@@ -81,17 +80,17 @@
           <g>
             <polygon class="st2" points="887.4,213.9 887.4,471.6 674.6,471.6 674.6,635.4 570.9,635.4 570.9,436.8 217.8,436.8 217.8,67.6 
            385.7,67.6 385.7,158 756.1,158 756.1,213.9 	" />
-            <rect x="78.4" y="67.6" class="st2" width="139.4" height="83" />
-            <rect x="78.4" y="150.6" class="st2" width="139.4" height="89" />
-            <rect x="78.4" y="239.6" class="st2" width="139.4" height="100.9" />
-            <rect x="78.4" y="340.5" class="st2" width="139.4" height="96.3" />
-            <rect x="78.4" y="436.8" class="st2" width="321" height="198.6" />
-            <rect x="399.4" y="436.8" class="st2" width="171.5" height="198.6" />
-            <rect x="674.6" y="471.6" class="st2" width="332" height="163.7" />
-            <rect x="756.1" y="67.6" class="st2" width="250.5" height="146.3" />
-            <rect x="565.4" y="67.6" class="st2" width="190.7" height="90.3" />
-            <rect x="385.7" y="67.6" class="st2" width="179.8" height="90.3" />
-            <rect x="887.4" y="213.9" class="st2" width="119.2" height="257.7" />
+            <rect id="200" x="78.4" y="67.6" class="st2" width="139.4" height="83" />
+            <rect id="201" x="78.4" y="150.6" class="st2" width="139.4" height="89" />
+            <rect id="202" x="78.4" y="239.6" class="st2" width="139.4" height="100.9" />
+            <rect id="203" x="78.4" y="340.5" class="st2" width="139.4" height="96.3" />
+            <rect id="204" x="78.4" y="436.8" class="st2" width="321" height="198.6" />
+            <rect id="205" x="399.4" y="436.8" class="st2" width="171.5" height="198.6" />
+            <rect id="206" x="674.6" y="471.6" class="st2" width="332" height="163.7" />
+            <rect id="207" x="756.1" y="67.6" class="st2" width="250.5" height="146.3" />
+            <rect id="208" x="565.4" y="67.6" class="st2" width="190.7" height="90.3" />
+            <rect id="209" x="385.7" y="67.6" class="st2" width="179.8" height="90.3" />
+            <rect id="210" x="887.4" y="213.9" class="st2" width="119.2" height="257.7" />
           </g>
         </svg>
 
@@ -105,19 +104,23 @@
 
     </div>
 
-  </section>
-
-
-  <div class="lvl-info">
-    <h1 class="lvl-num">2nd</h1>
-    <div class="room-info" ng-if="collapse">
-      <p>{{floor.rooms[0].title}}</p>
-      <ul>
-        <li>{{floor.rooms[0].department}}</li>
-        <li>{{floor.rooms[0].person}}</li>
-        <li>{{floor.rooms[0].item}}</li>
-      </ul>
-    </div>
   </div>
+
+<div class="main">
+  <div class="directory">
+    <!-- <input type="search" placeholder="search person or room" id="searchBox"> -->
+    <h2 class="show"  id="roomsHeading">Floor 1</h2>
+    <ul class="rooms">
+        <li class="show" ng-if="open"><a href="100">Conference Room</a></li>
+        <li class="show" ng-if="open2"><a href="101">Office #1</a></li>
+        <li class="show"><a href="C">Office #2</a></li>
+        <li class="show"><a href="D">Office #3</a></li>
+        <li class="show"><a href="E">Office #4</a></li>
+        <li class="show"><a href="F">Breakroom</a></li>
+       
+         -->
+    </ul>
+  </div>
+</div>
 
 </div>
