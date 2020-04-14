@@ -21,13 +21,35 @@
             var lev = this;
         
 			$("#Next").click(function(){
-                $("#Slider").append($("#Slider svg:first-of-type"));
+                $(".slider").append($(".slider svg:first-of-type"));
             });
             
             $("#Prev").click(function(){
-                $("#Slider").prepend($("#Slider svg:last-of-type"));
+                $(".slider").prepend($(".slider svg:last-of-type"));
             });
 
+            $(document).ready(function(){
+                $("map").click(function(){
+                  $("li").toggle();
+                });
+              });
+
+            //   $.get("/components/map/map", function(data) {
+            //       var source = $data.find('#Layer_2').html();
+            //       var search = source.search("rect");
+
+            //   })
+            
+
+            // lev.open() = function() {
+            //     var x = document.getElementById(ID)
+
+            //     if (x.visibility == 'hidden') {
+            //         x.visibility == 'visible'
+            //     } else{
+            //         x.visibility == 'hidden'
+            //     }
+            // }
 
 
 			// $(function() 

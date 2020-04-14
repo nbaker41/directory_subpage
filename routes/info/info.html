@@ -1,55 +1,38 @@
 <div id="info" ng-controller="infoCtrl as info">
-    <div class="info-container">
 
-        <div class="personal-info">
-            <div class="img"><img src="/images/FeliciaWilliams_prof.jpg" alt="profile pic"></div>
+        <div class="personal-info vline">
+            <div class="img"><img ng-src="{{app.images + 'FeliciaWilliams_prof copy.jpg'}}" alt="profile pic"></div>
             <div class="contact-info">
                 <h1>Felicia Williams</h1>
                 <div class="hline"></div>
-                <h3>Occupation: Communications Manager</h3>
-                <h3>Department: Admissions</h3>
-                <h3>Email: felicia.williams@gatech.edu</h3>
-                <h3>Room: 206</h3>
-                <h3>Floor: 2</h3>
-                <button class="back hvr-backward">&#10094;</button>
+                <p><strong>Occupation:</strong> Communications Manager</p>
+                <p><strong>Department:</strong> Admissions</p>
+                <p><strong>Email:</strong> felicia.williams@gatech.edu</p>
+                <p><strong>Room:</strong> 206</p>
+                <p><strong>Floor:</strong> 2</p>
+                <button class="back hvr-backward" ng-click="{{info.goBack()}}">&#10094;</button>
             </div>
+            <div class="vertline"></div>
         </div>
-        <div class="vertline"></div>
+        
         <div class="bio">
             <div class="text">
                 <h1>Bio</h1>
                 <p>Felica is a Communications Manager for The Georgia Institute of Technology's Admissions Department.
-                    Part of her
-                    responsibilitiesis to push content to the digital signs related to her department. She is passionate
-                    about education and wishes
-                    that she had more infromation about all the various opportunities that her university had to offer.
-                    She is motivated to inform students of important
-                    events and opportunities that will help them become successful graduates.
+                    Part of her responsibilities are to push content to the digital signs related to her department. She is passionate
+                    about education and wishes that she had more infromation about all the various opportunities that her university had to offer.
+                    She is motivated to inform students of important events and opportunities that will help them become successful graduates.
                 </p>
+                <p>Office Hours: <strong>2:00 - 3:00pm</strong></p>
             </div>
 
 
             <div class="flooricon">
-                <a ui-sref="floorplan" class="hvr-bob"><img ng-src="{{app.images +'location.png'}}" alt=""></a>
+                <a ui-sref="levels" class="hvr-bob"><img ng-src="{{app.images +'location.png'}}" alt=""></a>
             </div>
-            <!-- <div class="floorplan">
-                <img src="" alt=""> 
-                <div class="lvls">
-                    <a class="level" ng-click="first()"></a>
-                    <a class="level" ng-click="info.second()"></a>
-                    <a class="level" ng-click="info.third()"></a>
-                </div>
-                <div class="space"></div>
-                <div class="plan">
-                     <img ng-src="/images/{{images.src}}"> 
-                    <img ng-repeat="x in info.images" ng-src="{{x.src}}"
-                    ng-hide="!isCurrentSlideIndex($index)">
-                </div>
-
-            </div> -->
+            
 
         </div>
 
-    </div>
 
 </div>

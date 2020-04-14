@@ -7,12 +7,17 @@
 	.st1{display:inline;}
 	.st2{
 		fill:transparent;
-		stroke:#fff;
+		stroke:#000;
 		stroke-width:10;
 		stroke-miterlimit:10; 
 		pointer-events:all;
 		}
-		
+	.st2:hover{
+		fill:#b3a369;
+	}
+	.st2:active{
+		fill:#b3a369;
+	}
 	
 </style>
 <g id="Layer_1_xA0_Image_1_" class="st0">
@@ -39,11 +44,11 @@
 </g>
 <g id="Layer_2">
 	<polygon class="st2" points="838.9,210.1 838.9,493.7 501,493.7 501,641.7 95.8,641.7 95.8,288.3 445.3,288.3 445.3,210.1 	"/>
-	<rect x="95.8" y="61.3" class="st2" width="349.5" height="227.1"/>
-	<rect x="642.1" y="61.3" class="st2" width="196.8" height="148.8"/>
-	<rect x="445.3" y="61.3" class="st2" width="196.8" height="148.8"/>
-	<rect x="838.9" y="300.7" class="st2" width="150.3" height="193"/>
-	<rect x="838.9" y="61.3" class="st2" width="150.3" height="239.5"/>
-	<rect x="501" y="493.7" class="st2" width="488.2" height="148"/>
+	<rect x="95.8" y="61.3" id="101" class="st2" width="349.5" height="227.1" ng-click="click"/>
+	<rect x="642.1" y="61.3" id="102" class="st2" width="196.8" height="148.8" ng-click="click"/>
+	<rect x="445.3" y="61.3" id="103" class="st2" width="196.8" height="148.8" ng-click="click"/>
+	<rect x="838.9" y="300.7" id="104" class="st2" width="150.3" height="193" ng-click="click"/>
+	<rect x="838.9" y="61.3" id="105" class="st2" width="150.3" height="239.5" ng-click="click"/>
+	<rect x="501" y="493.7" id="106" class="st2" width="488.2" height="148" ng-click="click"/>
 </g>
 </svg>

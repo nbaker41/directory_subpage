@@ -1,0 +1,54 @@
+<div class="search">
+    <div class="alert alert-info">
+      <p><strong>Sort Type:</strong> {{ search.sortType }}</p>
+      <p><strong>Sort Reverse:</strong> {{ search.sortReverse }}</p>
+      <p><strong>Search Query:</strong> {{ search.searchFish }}</p>
+    </div>
+    <form>
+          <div class="search-bar">
+            <div class="search-icon">&#9906;</div>
+            <input type="text" class="form-control" placeholder="Find Me" ng-model="searchFaculty">
+          </div>
+      </form>
+    <table class="table">
+      <thead class="headers">
+        <tr >
+          <th>
+            <a href="#" ng-click="search.sortType ='name'; search.sortReverse = !search.sortReverse">
+              Name
+              <span ng-show="search.sortType == 'name' && !search.sortReverse" class="fa fa-caret-down"></span>
+                  <span ng-show="search.sortType == 'name' && search.sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </th>
+          <th>
+            <a href="#" ng-click="search.sortType ='department'; search.sortReverse = !search.sortReverse">
+              Department
+              <span ng-show="search.sortType == 'department' && !search.sortReverse" class="up-arrow">&#8964;</span>
+              <span ng-show="search.sortType == 'department' && search.sortReverse" class="down-arrow">&#8964;</span>
+            </a>
+            
+          </th>
+          <th>
+            <a href="#" ng-click="search.sortType ='room'; search.sortReverse = !search.sortReverse">
+              Room
+              <span ng-show="search.sortType == 'room' && !search.sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="search.sortType == 'room' && search.sortReverse" class="fa fa-caret-up"></span>
+            </a>
+            
+          </th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr ng-repeat="x in search.faculty | orderBy:search.sortType:search.sortReverse | filter: searchFaculty">
+          
+          <td><a ui-sref="info">{{x.name}}</a></td>
+          <td>{{x.department}}</td>
+          <td>{{x.room}}</td>
+          <td>{{x.href}}</td>
+        </tr>
+      </tbody>
+  
+    </table>
+  </div>
+  

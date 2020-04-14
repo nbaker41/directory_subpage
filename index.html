@@ -24,8 +24,10 @@
 </head>
 
 <body>
-	<a ui-sref="info"> Open Me!   </a>
-	<a ui-sref="levels">  Levels  </a>
+	<!-- <a ui-sref="info"> Open Me!   </a>
+	<a ui-sref="levels">  Levels  </a> -->
+	<sidebar></sidebar>
+	
 	<ui-view>
 		<!-- Route-specific html goes here. -->
 	</ui-view>
@@ -40,6 +42,13 @@
 	<script src="routes/info/info.js"></script>
 	<script src="routes/floorplan/floorplan.js"></script>
 	<script src="routes/levels/levels.js"></script>
+	<script src="routes/directory/directory.js"></script>
+<!--COMPONENTS-->
+	<script src="components/sidebar/sidebar.js"></script>
+	<script src="components/map/map.js"></script>
+<!-- DIRECTIVES -->
+<script src="directive/search/search.js"></script>
+
 
 
 

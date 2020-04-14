@@ -6,10 +6,15 @@
 		//routes
 		"info",
 		"floorplan",
-		"levels"
+		"levels",
+		"directory",
+
+		//components
+		"sidebar",
+		"map",
 		//directive
-		// "slider",
-		// "section"
+		"search"
+		
 	
 
 	]);
@@ -22,12 +27,62 @@
 
 	app.controller(
 		"appCtrl",
-		function ($scope, $transitions) {
+		function ($scope, $transitions, $rootScope) {
 			this.example = "Hello from AJS";
 			let app = this;
 
-			app.images = "../images/";
-			app.icons = "../icons/";
+			$rootScope.hello = function() {
+				var x = document.getElementById('blah');
+				if (x.style.display === 'none') {
+					x.style.dispaly = 'block';
+				} else { 
+					x.style.display = 'none';
+				}
+			}
+
+			
+
+			app.images = "../assets/visuals/images/";
+			app.icons = "../assets/visuals/icons/";
+			app.maps = "../assets/visuals/svg/"
+
+
+			app.levels = [{
+				img: '../assets/visuals/svg/floorplan.svg',
+				floor: '1st Floor'
+			},{
+				img: '../assets/visuals/svg/floorplan2.svg',
+				floor: '2nd Floor'
+			}]
+
+
+			app.rooms = [{
+				title: 'Laboratory',
+				department: 'department',
+				person:'person',
+				item:'item'
+			},{
+				title: 'Office #5',
+				department: 'department',
+				person:'person',
+				item:'item'
+			},{
+				title: 'Office #3',
+				department: 'department',
+				person:'person',
+				item:'item'
+			}]
+		
+			
+			 
+			
+
+			// app.directive('bdInfo', function() {
+			// 	return {
+			// 		restrict: "E",
+			// 		template: ""
+			// 	}
+			// })
 			// transitions
 			$transitions.onSuccess({}, function ($transition) {
 				app.route = {};

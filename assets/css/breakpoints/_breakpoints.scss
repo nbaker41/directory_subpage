@@ -1,17 +1,15 @@
-$phone-sm : 320px;
-$phone-md : 360px;
-$phone-lg : 375px;
-$phone-xl : 480px;
-$laptop : 1200px 1600px;
-$tablet-xs: 601px;
-$tablet-sm : 768px;
-$tablet-md : 834px;
-$tablet-lg : 1024px;
-$tablet-xl : 1536px;
+
+// $phone-sm : 360px;
+// $phone-md : 360px 375px;
+// $phone-lg : 375px 480px;
+// $laptop : 1200px 1600px;
+// $tablet-xs: 601px;
+// $tablet-sm : 768px 834px;
+// $tablet-lg : 1024px 1536px;
 
 
-body{
-    @include breakpoint($laptop) {
-        content:'Hello';
-    }
-}
+// body{
+//     @include breakpoint($laptop) {
+//         content:'Hello';
+//     }
+// }

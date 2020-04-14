@@ -21,7 +21,9 @@
 			var info = this;
 
 		
-			
+			// info.goBack() = function() {
+			// 	window.history.back();
+			// }
 			// info.currentIndex = 0;
 
 			// info.setCurrentSlideIndex = function (index) {

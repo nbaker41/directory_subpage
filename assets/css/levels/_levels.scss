@@ -1,110 +1,32 @@
+.floor-slider {
+    #sec2 {
+        order: 2;
+        flex: 0 1 20%;
+        align-self: flex-start;
+        justify-content: flex-start;
 
-// h2 {
-//     padding: 8px 0 10px 40px;
-//     color: #fdd703;
-//     font-family: 'Open Sans Condensed', sans-serif;
-//     letter-spacing: 1px;
-//     display: none
-// }
+        .floor-title {
+            border-bottom: #fff solid 2px;
+            font-size: 50px;
+            margin-top: 0px;
+        }
 
-// h2.show {
-//     display: block
-// }
+        li {
+            list-style-type: none;
 
-// div,
-// ul {
-//     display: block;
-//     float: left;
-//     box-sizing: border-box;
-// }
+            a {
+                font-size: 25px;
+            }
+            p:first-child{
+                font-size:25px;
+            }
+        }
 
-// .main {
-//     width: 100%;
-// }
 
-// .main .directory {
-//     height: 100vh;
-//     overflow-y: auto;
-//     width: 250px;
-// }
+        #people{
+            align-self:flex-end;
+            
+        }
+    }
 
-// .main ul {
-//     list-style: none;
-//     width: 100%;
-//     overflow: hidden
-// }
-
-// .main ul li {
-//     display: none
-// }
-
-// .main ul li.show {
-//     display: block
-// }
-
-// .main ul li a {
-//     padding: 5px;
-//     text-decoration: none;
-//     color: #fff;
-//     background: transparent;
-//     width: 100%;
-//     display: inline-block;
-//     line-height: 1.3em;
-//     font-size: 13px
-// }
-
-// a::before {
-//     content: "("attr(href) ") - ";
-//     height: 23px;
-//     float: left
-// }
-
-// .main ul li a.active {
-//     background: #000
-// }
-
-// .main .map {
-//     height: 100vh;
-//     overflow-y: auto;
-//     width: calc(100% - 250px)
-// }
-
-// input[type=search] {
-//     padding: 6px;
-//     margin-top: 8px;
-//     font-size: 17px;
-//     border: none;
-//     width: 96%;
-//     margin: 5px 2%;
-//     background: rgba(0, 0, 0, .5);
-//     border: 1px solid #ddd;
-//     color: #fff;
-// }
-
-// @keyframes flicker {
-//     0% {
-//             opacity: 0;
-//     }
-
-//     50% {
-//             opacity: 1;
-//     }
-
-//     100% {
-//             opacity: 0;
-//     }
-// }
-
-// @keyframes location {
-//     0% {
-//             opacity: 0;
-//     }
-
-//     20% {
-//             opacity: 1;
-//     }
-
-//     100% {
-//             opacity: 0;
-//     }
-// }
+}
