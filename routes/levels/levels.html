@@ -30,28 +30,17 @@
  <section id="sec2">
   <h2 class="floor-title">{{app.levels[0].floor}}</h2>
   <ul class="room-desc">
-      <li id="blah" ng-repeat="x in app.rooms[0]" >
-          <p>{{x}}</p>
+      <li id="blah" ng-repeat="x in app.rooms" >
+        <a href="#">{{x.title}}</a>
+          <!-- <select ng-model="departments" ng-options="x as titi.department.name"></select> -->
       </li>
-      <!-- <li class="show">
-          <a>Office #1</a>
-          <p>room info</p>
-          <p>room info</p>
-          <p>room info</p>
+      <li>
+
       </li>
-      <li class="show">
-        <a>Office #1</a>
-        <p>room info</p>
-        <p>room info</p>
-        <p>room info</p>
-      </li> -->
-      <!-- <li class="show"><a>Office #1</a></li>
-      <li class="show"><a>Office #1</a></li>
-      <li class="show"><a>Office #1</a></li> -->
   </ul>
 
-<label for="people">Faculty</label>
-<input type="radio" id="people" name="faculty" value="people">
+<!-- <label for="people">Faculty</label>
+<input type="radio" id="people" name="faculty" value="people"> -->
 </section>
 
 

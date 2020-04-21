@@ -5,7 +5,7 @@
 		"ui.router",
 		//routes
 		"info",
-		"floorplan",
+		"form",
 		"levels",
 		"directory",
 
@@ -73,7 +73,27 @@
 				item:'item'
 			}]
 		
-			
+			app.department = {
+				"name":"admissions",
+				"faculty": {
+					"staff":"Felicia Williams"
+				}
+			},{
+				"name":"crc",
+				"faculty":"Christoper Greene"
+			},{
+				"name":"ddst",
+				"faculty": {
+					"staff":"Byron Stokes",
+					"staff":"Mariabelen Romero",
+					"staff":"Mance Ellenburg",
+					"staff":"Cecil Dunston",
+					"staff":"David Stokes",
+					"staff":"Nick Baker"
+				}
+			}
+
+			// app.departments = 
 			 
 			
 

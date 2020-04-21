@@ -34,6 +34,8 @@
                 });
               });
 
+              
+
             //   $.get("/components/map/map", function(data) {
             //       var source = $data.find('#Layer_2').html();
             //       var search = source.search("rect");

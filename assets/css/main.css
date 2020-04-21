@@ -20,10 +20,20 @@
 
 .floor-slider #sec2 li {
   list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.floor-slider #sec2 li:active {
+  border: 2px #fff solid;
+  opacity: .5;
 }
 
 .floor-slider #sec2 li a {
   font-size: 25px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  clear: both;
 }
 
 .floor-slider #sec2 li p:first-child {
@@ -33,6 +43,85 @@
 .floor-slider #sec2 #people {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+#directory .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#directory .search .alert {
+  border-bottom: 2px solid #fff;
+  margin-bottom: 3vh;
+}
+
+#directory .search .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#directory .search .search-bar input {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 95%;
+          flex: 0 1 95%;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-bottom: 3vh;
+}
+
+#directory .search .search-bar .search-icon {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  font-size: 25px;
+}
+
+#directory .search table thead tr th {
+  text-align: left;
+  background-color: #fff;
+}
+
+#directory .search table thead tr th a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: calc(.65em + 1vw);
+}
+
+#directory .search table thead tr th a .down-arrow {
+  color: #000;
+}
+
+#directory .search tbody tr td a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#directory .search tbody tr td a:hover {
+  font-weight: 700;
+}
+
+#directory .search .h-line {
+  border-bottom: #fff solid 2px;
 }
 
 .floor-slider {
@@ -319,224 +408,7 @@ body #info .flooricon img {
   width: calc(4em + 1vw);
 }
 
-body #floorplan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin: 5% 0;
-}
-
-body #floorplan .floor-contain {
-  float: left;
-  margin-left: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
-}
-
-body #floorplan .floor-contain img {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-body #floorplan .floor-contain .plans {
-  z-index: 0;
-  position: relative;
-}
-
-body #floorplan .drop {
-  width: 80px;
-  top: 200px;
-  left: 500px;
-  -webkit-animation-name: pin;
-          animation-name: pin;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  z-index: 2;
-  position: absolute;
-}
-
-@-webkit-keyframes pin {
-  0% {
-    left: 500px;
-    top: -200px;
-  }
-  100% {
-    top: 200px;
-  }
-}
-
-@keyframes pin {
-  0% {
-    left: 500px;
-    top: -200px;
-  }
-  100% {
-    top: 200px;
-  }
-}
-
-body #floorplan .section {
-  position: absolute;
-  width: 305px;
-  height: 325px;
-  top: 125px;
-  right: 33.5%;
-}
-
-body #floorplan .section:active {
-  background-color: #b3a369;
-  opacity: 0.4;
-}
-
-body #floorplan .section-2 {
-  position: absolute;
-  width: 211px;
-  height: 166px;
-  top: 125px;
-  right: 941px;
-}
-
-body #floorplan .section-2:active {
-  background-color: #b3a369;
-  opacity: 0.4;
-}
-
-body #floorplan .section-3 {
-  position: absolute;
-  width: 211px;
-  height: 166px;
-  top: 125px;
-  right: 1209px;
-}
-
-body #floorplan .section-3:active {
-  background-color: #b3a369;
-  opacity: 0.4;
-}
-
-body #floorplan .floor-title {
-  float: right;
-  margin-right: 10%;
-  font-size: 45px;
-}
-
-body #floorplan .floor-title .floor-num {
-  padding: 0px;
-  margin: 0px;
-  border-bottom: 2px solid #fff;
-}
-
-body #floorplan .floor-title .room-info p {
-  font-size: 25pt;
-}
-
-body #floorplan .floor-title .room-info ul {
-  margin-top: 0;
-}
-
-body #floorplan .floor-title .room-info ul li {
-  font-size: 18pt;
-  line-height: 2;
-}
-
-#directory .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-#directory .search .alert {
-  border-bottom: 2px solid #fff;
-  margin-bottom: 3vh;
-}
-
-#directory .search .search-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#directory .search .search-bar input {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 95%;
-          flex: 0 1 95%;
-  height: 30px;
-  border-radius: 8px;
-  font-size: 15px;
-  margin-bottom: 3vh;
-}
-
-#directory .search .search-bar .search-icon {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  font-size: 25px;
-}
-
-#directory .search table thead tr th {
-  text-align: left;
-  background-color: #fff;
-}
-
-#directory .search table thead tr th a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 700;
-  font-size: calc(.65em + 1vw);
-}
-
-#directory .search table thead tr th a .down-arrow {
-  color: #000;
-}
-
-#directory .search tbody tr td a {
-  text-decoration: none;
-  color: #fff;
-}
-
-#directory .search tbody tr td a:hover {
-  font-weight: 700;
-}
-
-#directory .search .h-line {
-  border-bottom: #fff solid 2px;
-}
-
-.show {
+body .show {
   display: block;
 }
 /*# sourceMappingURL=main.css.map */
