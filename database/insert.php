@@ -5,13 +5,18 @@ $gender = $_POST['gender'];
 $email = $_POST['email'];
 $phoneCode = $_POST['phoneCode'];
 $phone = $_POST['phone'];
+
+
 if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) || !empty($phoneCode) || !empty($phone)) {
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "root";
     $dbname = "reg_form";
+
+
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+
     if (mysqli_connect_error()) {
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     } else {
@@ -24,6 +29,7 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
      $stmt->bind_result($email);
      $stmt->store_result();
      $rnum = $stmt->num_rows;
+
      if ($rnum==0) {
       $stmt->close();
       $stmt = $conn->prepare($INSERT);
@@ -33,6 +39,7 @@ if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) 
      } else {
       echo "Someone already register using this email";
      }
+     
      $stmt->close();
      $conn->close();
     }

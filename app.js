@@ -13,7 +13,8 @@
 		"sidebar",
 		"map",
 		//directive
-		"search"
+		"search",
+		"roomInfo"
 		
 	
 
@@ -31,14 +32,6 @@
 			this.example = "Hello from AJS";
 			let app = this;
 
-			$rootScope.hello = function() {
-				var x = document.getElementById('blah');
-				if (x.style.display === 'none') {
-					x.style.dispaly = 'block';
-				} else { 
-					x.style.display = 'none';
-				}
-			}
 
 			
 
@@ -56,53 +49,11 @@
 			}]
 
 
-			app.rooms = [{
-				title: 'Laboratory',
-				department: 'department',
-				person:'person',
-				item:'item'
-			},{
-				title: 'Office #5',
-				department: 'department',
-				person:'person',
-				item:'item'
-			},{
-				title: 'Office #3',
-				department: 'department',
-				person:'person',
-				item:'item'
-			}]
+			
 		
-			app.department = {
-				"name":"admissions",
-				"faculty": {
-					"staff":"Felicia Williams"
-				}
-			},{
-				"name":"crc",
-				"faculty":"Christoper Greene"
-			},{
-				"name":"ddst",
-				"faculty": {
-					"staff":"Byron Stokes",
-					"staff":"Mariabelen Romero",
-					"staff":"Mance Ellenburg",
-					"staff":"Cecil Dunston",
-					"staff":"David Stokes",
-					"staff":"Nick Baker"
-				}
-			}
-
-			// app.departments = 
-			 
 			
 
-			// app.directive('bdInfo', function() {
-			// 	return {
-			// 		restrict: "E",
-			// 		template: ""
-			// 	}
-			// })
+			
 			// transitions
 			$transitions.onSuccess({}, function ($transition) {
 				app.route = {};

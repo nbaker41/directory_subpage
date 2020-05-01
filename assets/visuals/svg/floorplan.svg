@@ -5,7 +5,19 @@
 <style type="text/css">
 	.st0{display:none;}
 	.st1{display:inline;}
-	.st2{fill:#B3A369;}
+	.st2{
+		fill:transparent;
+		<!-- stroke:#000;
+		stroke-width:10;
+		stroke-miterlimit:10;  -->
+		pointer-events:all;
+		}
+	.st2:hover{
+		fill:#b3a369;
+	}
+	.st2:active{
+		fill:#b3a369;
+	}
 </style>
 <g id="Layer_1_xA0_Image_1_" class="st0">
 	<g class="st1">

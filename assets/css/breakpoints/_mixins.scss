@@ -1,65 +1,80 @@
-@mixin breakpoint($screenWidth) {
+// @mixin breakpoint($screenWidth) {
 
-    // DEVICES
-    // mobile 
-        @if ($screenWidth==xs) {
-            @media (max-width:600px) {
-                @content;
-            }
-        } // 320, 360, 414
+//     // DEVICES
+//     // mobile 
+//         @if ($screenWidth==xs) {
+//             @media (max-width:600px) {
+//                 @content;
+//             }
+//         } // 320, 360, 414
     
-    // tablet
-        @if ($screenWidth==sm) {
-            @media (min-width:600px) {
-                @content;
-            }
-        } // 768
+//     // tablet
+//         @if ($screenWidth==sm) {
+//             @media (min-width:600px) {
+//                 @content;
+//             }
+//         } // 768
     
-    // desktop
-        @if ($screenWidth==md) {
-            @media (min-width:1000px) {
-                @content;
-            }
-        } // 1024, 1080, 1280 
+//     // desktop
+//         @if ($screenWidth==md) {
+//             @media (min-width:1000px) {
+//                 @content;
+//             }
+//         } // 1024, 1080, 1280 
     
-        @if ($screenWidth==lg) {
-            @media (min-width:1360px) {
-                @content;
-            }
-        } // 1366, 1440, 1536, 1600
+//         @if ($screenWidth==lg) {
+//             @media (min-width:1360px) {
+//                 @content;
+//             }
+//         } // 1366, 1440, 1536, 1600
     
-        @if ($screenWidth==xl) {
-            @media (min-width:1900px) {
-                @content;
-            }
-        } // 1920
+//         @if ($screenWidth==xl) {
+//             @media (min-width:1900px) {
+//                 @content;
+//             }
+//         } // 1920
     
-    // SCREENS 
-        @if ($screenWidth==v) {
-            @media (max-width:1900px) {
-                @content;
-            }
-        }
+//     // SCREENS 
+//         @if ($screenWidth==v) {
+//             @media (max-width:1900px) {
+//                 @content;
+//             }
+//         }
     
-        @if ($screenWidth==h) {
-            @media (min-width:1900px) {
-                @content;
-            }
-        }
-    }
+//         @if ($screenWidth==h) {
+//             @media (min-width:1900px) {
+//                 @content;
+//             }
+//         }
+//     }
     
-    @include breakpoint(v) {
-        body:before {
-            content: "v";
-        }
-    }
+//     @include breakpoint(v) {
+//         body:before {
+//             content: "v";
+//         }
+//     }
     
-    @include breakpoint(h) {
-        body:before {
-            content: "h";
-        }
-    }
+//     @include breakpoint(h) {
+//         body:before {
+//             content: "h";
+//         }
+//     }
     
-    body:before {
-        display: none;
-    }
+//     body:before {
+//         display: none;
+//     }
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }

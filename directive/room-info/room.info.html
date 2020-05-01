@@ -1,0 +1,21 @@
+<!-- <div class="directory">
+<h2 id="roomsHeading" class="floor-title show">{{app.levels[0].floor}}</h2>
+<ul class="rooms" >
+    <li class="show" ng-repeat="x in room.rooms" >
+      <a href='{{x.href}}'>{{x.department}}</a>
+    </li>
+</ul>
+</div> -->
+
+<div class="directory">
+    <!-- <input type="search" placeholder="search person or room" id="searchBox"> -->
+    <h2 class="show"  id="roomsHeading">Rooms</h2>
+    <ul class="rooms">
+        <li class="show" ng-repeat="x in room.rooms"><a href="{{x.href}}" id="{{x.id}}">{{x.department}}</a></li>
+    </ul>
+
+    <!-- <h2 class="show" id="peopleHeading">people</h2>
+    <ul class="people">
+        <li class="show" ng-repeat="x in room.rooms"><a href="{{x.href}}">{{x.person}}</a></li>
+    </ul> -->
+</div>

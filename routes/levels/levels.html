@@ -1,24 +1,24 @@
-<div class="floor-slider" ng-contoller="levCtrl as lev">
+<div class="room-info" ng-contoller="levCtrl as lev">
 
   
 
-    <div id="Arrows">
-      <button id="Prev" aria-hidden="true">&#10094;</button><br />
-      <button id="Next" aria-hidden="true">&#10095;</button>
-    </div>
+  <div id="Arrows">
+    <button id="Prev" aria-hidden="true">&#10094;</button><br />
+    <button id="Next" aria-hidden="true">&#10095;</button>
+  </div>
 
 
     <!-- SLIDESHOW -->
-    <section id="sec1">
+    <section id="sec1" >
+      
+     
 
       <div class="slideshow">
 
-          <div class="slider">
+          <div class="slider map">
             <map></map>
             
-             <!-- <object ng-attr-data="{{app.maps + 'floorplan.svg'}}" type="image/svg+xml"></object>
-             <object ng-attr-data="{{app.maps + 'floorplan2.svg'}}" type="image/svg+xml"></object> -->
-             <!-- <img ng-src="{{app.images + 'floorplan2.svg'}}" alt="floor2"> -->
+             
           </div>
           
 
@@ -27,17 +27,9 @@
 
 
  <!-- ROOM INFO -->
- <section id="sec2">
-  <h2 class="floor-title">{{app.levels[0].floor}}</h2>
-  <ul class="room-desc">
-      <li id="blah" ng-repeat="x in app.rooms" >
-        <a href="#">{{x.title}}</a>
-          <!-- <select ng-model="departments" ng-options="x as titi.department.name"></select> -->
-      </li>
-      <li>
-
-      </li>
-  </ul>
+ <section id="sec2" >
+ 
+  <room-info></room-info>
 
 <!-- <label for="people">Faculty</label>
 <input type="radio" id="people" name="faculty" value="people"> -->

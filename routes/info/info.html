@@ -1,28 +1,24 @@
 <div id="info" ng-controller="infoCtrl as info">
 
-        <div class="personal-info vline">
-            <div class="img"><img ng-src="{{app.images + 'FeliciaWilliams_prof copy.jpg'}}" alt="profile pic"></div>
+        <div class="personal-info vline" ng-repeat="x in info.profiles">
+            <div class="img"><img ng-src="{{x.pic}}" alt="profile pic"></div>
             <div class="contact-info">
-                <h1>Felicia Williams</h1>
+                <h1>{{x.name}}</h1>
                 <div class="hline"></div>
-                <p><strong>Occupation:</strong> Communications Manager</p>
-                <p><strong>Department:</strong> Admissions</p>
-                <p><strong>Email:</strong> felicia.williams@gatech.edu</p>
-                <p><strong>Room:</strong> 206</p>
-                <p><strong>Floor:</strong> 2</p>
-                <button class="back hvr-backward" ng-click="{{info.goBack()}}">&#10094;</button>
+                <p><strong>Occupation:</strong> {{x.occupation}}</p>
+                <p><strong>Department:</strong> {{x.department}}</p>
+                <p><strong>Email:</strong> {{x.email}}</p>
+                <p><strong>Room:</strong> {{x.room}}</p>
+                <p><strong>Floor:</strong> {{x.floor}}</p>
+                <button class="back hvr-backward" ng-click="info.goBack()">&#10094;</button>
             </div>
             <div class="vertline"></div>
         </div>
         
-        <div class="bio">
+        <div class="bio" ng-repeat="x in info.profiles">
             <div class="text">
                 <h1>Bio</h1>
-                <p>Felica is a Communications Manager for The Georgia Institute of Technology's Admissions Department.
-                    Part of her responsibilities are to push content to the digital signs related to her department. She is passionate
-                    about education and wishes that she had more infromation about all the various opportunities that her university had to offer.
-                    She is motivated to inform students of important events and opportunities that will help them become successful graduates.
-                </p>
+                <p>{{x.bio}}</p>
                 <p>Office Hours: <strong>2:00 - 3:00pm</strong></p>
             </div>
 

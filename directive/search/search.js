@@ -24,7 +24,7 @@
 		search.sortReverse = false; // set the default sort order
 		search.searchFaculty = ''; //the the default sort filter
 
-		//create the list of sushi rolls
+		//create the list
 
 		search.faculty = [
 			{ name: 'Felicia Williams', department: 'Admissions', room: 201, url: '../routes/info/ino.html'},
@@ -32,7 +32,14 @@
 			{ name: 'Vincent Carter', department:'Mechanical Engineering', room: 116},
 			{ name: 'Kevin Durring', department:'Institutional Research & Planning', room: 108},
       { name: 'Kristen McDowell', department:'Office of the Arts', room: 210},
-		];
+    ];
+    
+    $http.get("database/get_data.php")
+			.then(function (response)
+			{
+				info.direct = response.data.records;
+			})
+
 	
 
     });

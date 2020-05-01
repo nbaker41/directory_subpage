@@ -15,8 +15,10 @@
     this.app = $scope.$parent.app;
     let map = this;
 
+
     
 
+    
     });
 
 })();

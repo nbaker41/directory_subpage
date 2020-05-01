@@ -28,12 +28,25 @@
                 $(".slider").prepend($(".slider svg:last-of-type"));
             });
 
-            $(document).ready(function(){
-                $("map").click(function(){
-                  $("li").toggle();
-                });
-              });
+            // $(document).ready(function(){
+            //     $("map").click(function(){
+            //       $("li").toggle();
+            //     });
+            //   });
 
+
+            var isBlink = false,
+	        blink = function($this){
+  	        $this.fadeOut( function(){ 
+      	    $this.fadeIn();
+    		if (isBlink) blink($this);
+             });
+            }
+
+            $("#101").click( function(){
+                    isBlink = !isBlink;
+                blink($(this));
+            });
               
 
             //   $.get("/components/map/map", function(data) {

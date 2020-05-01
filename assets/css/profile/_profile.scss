@@ -1,0 +1,99 @@
+#info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    // margin:  0 3vw;
+
+    .vline {
+        border-right: 2px solid #fff;
+    }
+
+    .personal-info {
+        order: 1;
+        flex: 0 1 25%;
+        align-self: stretch;
+        height: 100vh;
+        float: left;
+
+
+
+
+        .img {
+            width: 100%;
+            height: auto;
+            background-color: #cccccc;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+
+            }
+
+        }
+
+        .contact-info {
+            width: 100%;
+
+            .hline {
+                margin-bottom: 40px;
+                border-bottom: 2px solid #cccccc;
+            }
+
+            h1 {
+                text-align: center;
+                
+            }
+
+            h3 {
+                padding-left: 45px;
+                margin-bottom: 30px;
+            }
+
+            .back {
+                position: absolute;
+                align-self: flex-end;
+                bottom: 0px;
+                clear: both;
+                width: 20%;
+                // font-size: calc(1.5em + 1vw);
+                border: none;
+                background: transparent;
+                color: #ffffff;
+            }
+        }
+
+
+    }
+
+
+
+    .bio {
+        order: 2;
+        flex: 0 1 70%;
+        align-self: stretch;
+        height: 70vh;
+
+        p {
+            // font-size: calc(.7em + 1vw);
+            // font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+
+    }
+
+    .flooricon {
+        order: 3;
+        flex: 0 1 70%;
+        justify-content: flex-end;
+        align-self: flex-end;
+
+        img {
+            width: calc(4em + 1vw);
+        }
+    }
+
+}
