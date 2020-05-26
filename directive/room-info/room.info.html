@@ -1,21 +1,33 @@
-<!-- <div class="directory">
-<h2 id="roomsHeading" class="floor-title show">{{app.levels[0].floor}}</h2>
-<ul class="rooms" >
-    <li class="show" ng-repeat="x in room.rooms" >
-      <a href='{{x.href}}'>{{x.department}}</a>
-    </li>
-</ul>
-</div> -->
+<div class="directory" ng-controller="roomCtrl as room">
+  
+    <select id="roomsHeading" class="custom-select" ng-model="pan.show">
+        <option value="All">All</option>
+        <option value="Departments">Departments</option>
+        <option value="Faculty">Faculty</option>
+    </select>
 
-<div class="directory">
-    <!-- <input type="search" placeholder="search person or room" id="searchBox"> -->
-    <h2 class="show"  id="roomsHeading">Rooms</h2>
-    <ul class="rooms">
-        <li class="show" ng-repeat="x in room.rooms"><a href="{{x.href}}" id="{{x.id}}">{{x.department}}</a></li>
+<div class="scroll">
+    <ul class="rooms" >
+        <li class="show" ng-show="pan.show == 'All'" ng-repeat="x in pan.faculty | filter: searchFaculty">
+            <a href="{{x.office.number}}">{{x.department.name}}</a>
+            <a href="{{x.office.number}}">{{x.name.full()}}</a>
+        </li>
+        <li class="show" ng-show="pan.show== 'Departments'" ng-repeat="x in pan.faculty | filter: searchFaculty">
+            <a href="{{x.office.number}}">{{x.department.name}}</a>
+        </li> 
+        <li class="show" ng-show="pan.show== 'Faculty'" ng-repeat="x in pan.faculty | filter: searchFaculty">
+            <a href="{{x.office.number}}">{{x.name.full()}}</a>
+        </li> 
     </ul>
-
-    <!-- <h2 class="show" id="peopleHeading">people</h2>
-    <ul class="people">
-        <li class="show" ng-repeat="x in room.rooms"><a href="{{x.href}}">{{x.person}}</a></li>
-    </ul> -->
+</div>
+    
+<search></search>
+<!-- <form>
+<div class="searchbar">
+    <input class="search" type="text" placeholder="Search" ng-model="find">
+ </div>
+</form> -->
+    <!-- <span>Bathrooms:</span><input type="checkbox" > -->
+    <!-- <button class="help" ng-click="app.icons()">Icons</button> -->
+    
 </div>

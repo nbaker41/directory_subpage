@@ -22,54 +22,300 @@
 
 
 
-    room.rooms = [{
-        id:1,
-        department: 'department',
-        person:'person',
-        item:'item',
-        href:101
-    },{
-        id:2,
-        department: 'department',
-        person:'person',
-        item:'item',
-        href:102
-    },{
-        id:3,
-        department: 'department',
-        person:'person',
-        item:'item',
-        href:103
-    }]
+    pan.faculty = [
+               
+        {
+            id:01,
+            name:{
+                first: 'Felicia',
+                middle: 'Ashley',
+                last: 'Williams',
+                full: function() {
+                    return this.first + " " + this.middle.charAt(0) + "." + " " + this.last;
+                },
+            },
+            name_short:'',
+            department: {
+                name:"Admissions",
+                team: null,
+                role:"Admissions Counsellor",
+            },
+            bio:`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean. Ullamcorper 
+            sit amet risus nullam eget felis. Volutpat sed cras ornare arcu dui vivamus arcu felis.`,
+            address:{
+                street:'1234 Main Street',
+                city:'Atlanta',
+                zip:'30024',
+                building:null
+            },
+            contact:{
+                phone:'012.345.6789',
+                email:'fwilliams@example.com',
+                other:null
+            },
+            office: {
+                number:201,
 
-    // search.sortType = 'name'; //set the default sort type
-	// 	search.sortReverse = false; // set the default sort order
-	// 	search.searchFaculty = ''; //the the default sort filter
-
-	// 	//create the list
-
-	// 	search.faculty = [
-	// 		{ name: 'Felicia Williams', department: 'Admissions', room: 201, url: '../routes/info/ino.html'},
-	// 		{ name: 'Phillip Banks', department:'Legal Affairs', room: 133},
-	// 		{ name: 'Vincent Carter', department:'Mechanical Engineering', room: 116},
-	// 		{ name: 'Kevin Durring', department:'Institutional Research & Planning', room: 108},
-    //   { name: 'Kristen McDowell', department:'Office of the Arts', room: 210},
-    // ];
+            }
+        },
+        {
+            id:02,
+            name:{
+                first: 'Philip',
+                middle: 'Gerald',
+                last: 'Banks',
+                full: function() {
+                    return this.first + " " + this.middle.charAt(0) + "." + " " + this.last;
+                },
+            },
+            name_short:'',
+            department: {
+                name:"Admissions",
+                team: null,
+                role:"Admissions Counsellor",
+            },
+            bio:`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean. Ullamcorper 
+            sit amet risus nullam eget felis. Volutpat sed cras ornare arcu dui vivamus arcu felis.`,
+            address:{
+                street:'1234 Main Street',
+                city:'Atlanta',
+                zip:'30024',
+                building:null
+            },
+            contact:{
+                phone:'012.345.6789',
+                email:'fwilliams@example.com',
+                other:null
+            },
+            office: {
+                number:201,
+                
+            }
+        },
+        {
+            id:03,
+            name:{
+                first: 'Vincent',
+                middle: 'Skye',
+                last: 'Carter',
+                full: function() {
+                    return this.first + " " + this.middle.charAt(0) + "." + " " + this.last;
+                },
+            },
+            name_short:'',
+            department: {
+                name:"Admissions",
+                team: null,
+                role:"Admissions Counsellor",
+            },
+            bio:`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean. Ullamcorper 
+            sit amet risus nullam eget felis. Volutpat sed cras ornare arcu dui vivamus arcu felis.`,
+            address:{
+                street:'1234 Main Street',
+                city:'Atlanta',
+                zip:'30024',
+                building:null
+            },
+            contact:{
+                phone:'012.345.6789',
+                email:'fwilliams@example.com',
+                other:null
+            },
+            office: {
+                number:105,
+                
+            }
+        },
+        {
+            id:04,
+            name:{
+                first: 'Kevin',
+                middle: 'Lawrence',
+                last: 'Durring',
+                full: function() {
+                    return this.first + " " + this.middle.charAt(0) + "." + " " + this.last;
+                },
+            },
+            name_short:'',
+            department: {
+                name:"Admissions",
+                team: null,
+                role:"Admissions Counsellor",
+            },
+            bio:`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean. Ullamcorper 
+            sit amet risus nullam eget felis. Volutpat sed cras ornare arcu dui vivamus arcu felis.`,
+            address:{
+                street:'1234 Main Street',
+                city:'Atlanta',
+                zip:'30024',
+                building:null
+            },
+            contact:{
+                phone:'012.345.6789',
+                email:'fwilliams@example.com',
+                other:null
+            },
+            office: {
+                number:101,
+                
+            }
+        },
+        {
+            id:05,
+            name:{
+                first: 'Kristen',
+                middle: 'Diane',
+                last: 'McDowell',
+                full: function() {
+                    return this.first + " " + this.middle.charAt(0) + "." + " " + this.last;
+                },
+            },
+            name_short:'',
+            department: {
+                name:"Office of the Arts",
+                team: null,
+                role:"Counsellor",
+            },
+            bio:`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean. Ullamcorper 
+            sit amet risus nullam eget felis. Volutpat sed cras ornare arcu dui vivamus arcu felis.`,
+            address:{
+                street:'1234 Main Street',
+                city:'Atlanta',
+                zip:'30024',
+                building:null
+            },
+            contact:{
+                phone:'012.345.6789',
+                email:'fwilliams@example.com',
+                other:null
+            },
+            office: {
+                number:107,
+                
+            }
+        },
+        {
+            id:06,
+            name:{
+                first: 'Andre',
+                middle: 'X',
+                last: 'Irvin',
+                full: function() {
+                    return this.first + " " + this.middle.charAt(0) + "." + " " + this.last;
+                },
+            },
+            name_short:'',
+            department: {
+                name:"Admissions",
+                team: null,
+                role:"Admissions Counsellor",
+            },
+            bio:`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean. Ullamcorper 
+            sit amet risus nullam eget felis. Volutpat sed cras ornare arcu dui vivamus arcu felis.`,
+            address:{
+                street:'1234 Main Street',
+                city:'Atlanta',
+                zip:'30024',
+                building:null
+            },
+            contact:{
+                phone:'012.345.6789',
+                email:'fwilliams@example.com',
+                other:null
+            },
+            office: {
+                number:203,
+                
+            }
     
-    // $http.get("database/get_data.php")
-	// 		.then(function (response)
-	// 		{
-	// 			info.direct = response.data.records;
-	// 		})
-    
+        }
+]
 
-    room.toggle_visibility = function (id) {
-        var e = document.getElementById(id);
-        if(e.style.display == 'block')
-           e.style.display = 'none';
-        else
-           e.style.display = 'block';
-     }
+
+
+
+
+
+
+
+
+
+
+$(function () {
+
+    //overwrite jquery to match any case (by making uppercase)
+    jQuery.expr[':'].contains = function (a, i, m) {
+        return jQuery(a).text().toUpperCase()
+            .indexOf(m[3].toUpperCase()) >= 0;
+    };
+
+
+
+    var deactivateAll = function () {
+        $('.roomHighlight').removeClass('active');
+        $('.directory a').removeClass('active');
+        $('g').removeClass('hasActiveCircle');
+    }
+
+    var hideShowHeadings = function () {
+        if ($('.rooms .show').length > 0) {
+            $('#roomsHeading').addClass('show');
+        } else {
+            $('#roomsHeading').removeClass('show');
+        }
+        if ($('.people .show').length > 0) {
+            $('#peopleHeading').addClass('show');
+        } else {
+            $('#peopleHeading').removeClass('show');
+        }
+    }
+
+    $('.directory .rooms a').on("click", function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        deactivateAll();
+
+        $('#' + target).addClass('active')
+        $(this).addClass('active')
+        $('.slider').animate({
+            scrollTop: $("#" + target).offset().top
+        });
+
+    });
+
+    $('.directory .people a').on("click", function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        deactivateAll();
+
+
+        $(this).addClass('active')
+        $('.slider').animate({
+            scrollTop: $("#" + target).offset().top
+        }, 200);
+        $("#" + target).addClass('hasActiveCircle')
+
+    });
+    $('#searchBox').on("input", function (e) {
+        var searchMatch = $(this).val();
+        console.log(searchMatch);
+
+        if (searchMatch == "") {
+            $("li").addClass("show");
+        } else {
+            $("li").removeClass("show");
+            $("li:contains(" + searchMatch + ")").addClass("show");
+            hideShowHeadings();
+        }
+
+    });
+})
 	
 
     });
