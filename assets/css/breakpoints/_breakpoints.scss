@@ -20,15 +20,16 @@
     #info {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         flex-wrap: nowrap;
-        margin-top: 10%;
+        justify-content: center;
+        margin-top: 8%;
         
 
 
         .vline {
             border: none;
         }
+
 
         .personal-info {
             flex: 0 1 50%;
@@ -42,10 +43,8 @@
             }
 
             .contact-info {
-               
 
                 .hline{
-                    // border:none;
                     width: 75vw;
                     margin: 0 auto;
                 }
@@ -58,17 +57,23 @@
         }
 
         .bio{
-            display:flex;
-            margin: 5% 5%;
+            flex: 0 1 60%;
+            order: 2;
+            padding: 0 1em;
+            // margin-bottom: 2em;
 
             h1{
                 text-align: center;
             }
             p{
-                
+                text-align:center;
                 line-height: 2em;
             }
 
+        }
+
+        .flooricon{
+            display:none;
         }
 
     }

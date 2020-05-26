@@ -8,84 +8,30 @@
 
         h2 {
 
-            color: #fdd703;
+            color: #ffffff;
             letter-spacing: 1px;
             
-
-
-            .show {
-                display: block
-            }
         }
-
-
-        div,
-        ul {
-            display: block;
-            float: left;
-            box-sizing: border-box;
-        }
-
         
+        ul{
+            li{
+                list-style-type: none;
+                padding: 8px 0;
 
-        .directory {
-            overflow-y: auto;
-        }
-
-        ul {
-            list-style: none;
-            width: 100%;
-            overflow: hidden;
-        
-
-        li {
-         
-
-            .show {
-                display: block
-            }
-
-            a {
-                padding: 5px;
-                text-decoration: none;
-                color: #fff;
-                background: transparent;
-                width: 100%;
-                display: inline-block;
-                line-height: 1.3em;
-                font-size: 13px;
-
-                ::before {
-                    content: "("attr(href) ") - ";
-                    height: 23px;
-                    float: left
-                }
-                .active {
-                    border: #b3a369 solid 1px;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    padding: 8px;
+                     
+                    &:active{
+                        border: #b3a369 solid 2px;
+                    }
                 }
             }
         }
 
+
     }
-
-        .map {
-            overflow-y: auto;
-            
-        }
-
-        input[type=search] {
-            padding: 6px;
-            margin-top: 8px;
-            font-size: 17px;
-            border: none;
-            width: 96%;
-            margin: 5px 2%;
-            background: rgba(0, 0, 0, .5);
-            border: 1px solid #ddd;
-            color: #fff;
-        }
-    }
-
     @keyframes flicker {
         0% {
             opacity: 0;
