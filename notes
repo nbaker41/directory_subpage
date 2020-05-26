@@ -191,3 +191,124 @@ class="fa fa-chevron-left fa-2x"
             
             });
     });
+
+ // var isBlink = false,
+	        // blink = function($this){
+  	        // $this.fadeOut( function(){ 
+      	    // $this.fadeIn();
+    		// if (isBlink) blink($this);
+            //  });
+            // }
+ // $("#101").click( function(){
+            //         isBlink = !isBlink;
+            //     blink($(this));
+            // });
+
+
+            //   $.get("/components/map/map.html", function(data) {
+                //   var source = $data.find('#Layer_1').html();
+                //   var search = source.search("rect");
+
+            //   })
+
+
+
+
+
+			// $(function() 
+            // {
+
+            //     //overwrite jquery to match any case (by making uppercase)
+            //     jQuery.expr[':'].contains = function(a, i, m) {
+            //     return jQuery(a).text().toUpperCase()
+            //     .indexOf(m[3].toUpperCase()) >= 0;
+            //     };
+
+
+
+            // var deactivateAll=function()
+            //         {
+            //         $('.roomHighlight').removeClass('active');
+            //         $('.directory a').removeClass('active');
+            //         $('g').removeClass('hasActiveCircle');
+            //         }    
+
+            // var hideShowHeadings=function()
+            //         {
+            //         if($('.rooms .show').length >0)
+            //             {$('#roomsHeading').addClass('show');}
+            //         else{$('#roomsHeading').removeClass('show');}
+            //         if($('.people .show').length >0)
+            //             {$('#peopleHeading').addClass('show');}
+            //         else{$('#peopleHeading').removeClass('show');}
+
+
+            //         }    
+
+            // $('.directory .rooms a').on( "click", function(e) 
+            //         {
+            //         e.preventDefault();
+            //         var target = $(this).attr('href');
+            //         deactivateAll();
+
+            //         $('#'+target).addClass('active')
+            //         $(this).addClass('active')
+            //         $('.map').animate({scrollTop: $("#"+target).offset().top});
+
+            //         });
+
+            //  $('.directory .people a').on( "click", function(e) 
+            //         {
+            //         e.preventDefault();
+            //         var target = $(this).attr('href');
+            //         deactivateAll();
+
+
+            //         $(this).addClass('active')
+            //         $('.map').animate({scrollTop: $("#"+target).offset().top}, 200);
+            //         $("#"+target).addClass('hasActiveCircle')
+
+            //         });
+            // $('#searchBox').on( "input", function(e) 
+            //         {
+            //         var searchMatch = $(this).val();
+            //         console.log( searchMatch);
+
+            //         if(searchMatch =="")
+            //             {
+            //             $("li").addClass("show");
+            //             }
+            //         else
+            //             {
+            //             $("li").removeClass("show");
+            //             $("li:contains("+searchMatch+")").addClass("show");
+            //             hideShowHeadings();
+            //             }
+                    
+            //         });
+			// });
+
+
+
+
+
+
+
+
+
+
+
+
+            /*.st2:hover{
+		fill:#b3a369;
+	}
+	.st2:active{
+		fill:#b3a369;
+		animation: flicker 1s ease-in-out infinite;
+	}
+	.roomHighlight {
+		fill:#ccdbe1;
+		stroke-miterlimit: 10
+	}*/
+	.roomHighlight.active { fill: #b3a369;animation: flicker 1s ease-in-out infinite}
+            /* Animation for Rooms*/
