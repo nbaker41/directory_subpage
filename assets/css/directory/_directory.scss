@@ -1,83 +1,77 @@
 #directory {
+    margin-top: 3em;
 
-    .search {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
+    table {
+        width: 100vw;
+        height:250px;
+        // position:relative;
+        overflow-y: scroll;
 
-        .alert {
-            border-bottom: 2px solid #fff;
-            margin-bottom: 3vh;
-        }
-
-        .search-bar {
-            display: flex;
-            justify-content: space-around;
-
-            input {
-                order: 1;
-                flex: 0 1 95%;
-                height: 30px;
-                border-radius: 8px;
-                font-size: 15px;
-                margin-bottom: 3vh;
-            }
-
-            .search-icon {
-                order: 2;
-                transform: rotate(-45deg);
-                font-size: 25px;
-
-            }
-
-        }
-
-        table {
-            thead {
-                tr {
-                    th {
-                        text-align: left;
-                        background-color: #fff;
-
-                        a {
-                            text-decoration: none;
-                            color: #000;
-                            font-weight: 700;
-                            font-size: calc(.65em + 1vw);
-
-                            .down-arrow {
-                                color: #000;
-
-                            }
-                        }
-                    }
-                }
-            }
-
-
-
-        }
-
-        tbody {
+        thead {
+            width: 100%;
+            background-color: #000;
+            
             tr {
-                td {
+
+                th {
+                    background: #fff;
+                    text-align: left;
+                    padding: .4em;
+
+
+                    // width: 100%;
                     a {
+                        color: #000;
                         text-decoration: none;
-                        color:#fff;
 
-                        &:hover{
-                            font-weight:700;
+                        span{
+                            .up-arrow{
+                                font-size: 7px;
+                            }
+                           
                         }
+
                     }
+
+                    
+
                 }
+
             }
+
         }
 
-        .h-line {
-            border-bottom: #fff solid 2px;
+        tbody{
+            height: 300px;
         }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            
+            th {
+                width: 100%;
+                
+                &:first-child{
+                    width:60%;
+                }
+
+                &:nth-child(2){
+                    width:100%;
+                }
+
+                &:nth-child(3){
+                    width:100%;
+                }
+
+            }
+        
+
+        }
+
 
     }
+
 
 }
