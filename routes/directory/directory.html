@@ -1,3 +1,44 @@
 <div id="directory">
-<div search></div>
+
+    <!-- <div search></div> -->
+<table class="table">
+    <thead class="headers">
+        
+      <tr id="myHeader">
+        <th>
+          <a href="#" ng-click="search.sortType ='name.first'; search.sortReverse = !search.sortReverse">
+            Name
+            <span ng-show="search.sortType == 'name.first' && !search.sortReverse" class="down-arrow">&#8964;</span>
+                <span ng-show="search.sortType == 'name.first' && search.sortReverse" class="up-arrow">&#8963;</span>
+          </a>
+        </th>
+        <th>
+          <a href="#" ng-click="search.sortType ='department.name'; search.sortReverse = !search.sortReverse">
+            Department
+            <span ng-show="search.sortType == 'department.name' && !search.sortReverse" class="down-arrow">&#8964;</span>
+            <span ng-show="search.sortType == 'department.name' && search.sortReverse" class="up-arrow">&#8963;</span>
+          </a>
+          
+        </th>
+        <th>
+          <a href="#" ng-click="search.sortType ='office.number'; search.sortReverse = !search.sortReverse">
+            Room
+            <span ng-show="search.sortType == 'office.number' && !search.sortReverse" class="down-arrow">&#8964;</span>
+            <span ng-show="search.sortType == 'office.number' && search.sortReverse" class="up-arrow">&#8963;</span>
+          </a>
+          
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="x in app.faculty| orderBy:search.sortType:search.sortReverse | filter: searchFaculty" ui-sref="info({id:x.id})">
+        
+        <td>{{x.name.full()}}</td>
+        <td>{{x.department.name}}</td>
+        <td>{{x.office.number}}</td>
+      </tr>
+    </tbody>
+
+  </table>
 </div>

@@ -20,22 +20,21 @@
 			this.app = $scope.$parent.app;
             var lev = this;
         
-			$("#Next").click(function(){
-                $(".slider").append($(".slider svg:first-of-type"));
-            });
+			// var rect = document.getElementsByTagName("rect");
+            // for ( i = 0; i < rect.length; i++ ) {
+            //    rect[i].setAttribute("id", app[i].id);
+            // } 
+
             
-            $("#Prev").click(function(){
-                $(".slider").prepend($(".slider svg:last-of-type"));
-            });
-
-            // $(document).ready(function(){
-            //     $("map").click(function(){
-            //       $("li").toggle();
-            //     });
-            //   });
-
-           
-
+				document.addEventListener("click", function(event){
+				// First, check to see if it was an anchor that was clicked
+				// in the document
+				if(event.target.nodeName === "A"){
+					// If so, add a class to the target 
+					// Get the href attribute and strip off the "#", then find that element and toggle the class
+				document.getElementById(event.target.getAttribute("href").replace("#","")).classList.toggle("active");
+				}
+				});
             
            
               

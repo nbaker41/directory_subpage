@@ -1,0 +1,39 @@
+<div class="hero">
+    <img class="landimg" src="{{app.images + 'clough.jpg'}}" alt="">
+    <div class="caption">Georgia Tech</div>
+</div>
+
+<div class="campus" ng-controller="campCtrl">
+
+<h3 class="title">Georgia Tech - Atlanta Campus</h3>
+
+    <select id="roomsHeading" class="custom-select" ng-model="app.show">
+        <option value="All">All</option>
+        <option value="Departments">Departments</option>
+        <option value="Buildings">Buildings</option>
+    </select>
+
+    <div class="scroll">
+        <ul class="options">
+            <li ng-show="app.show== 'All'">
+                <a ui-sref="directory">Admissions</a>
+                <a href="#">Digital Signage</a>
+                <a href="#">Parking and Transportation</a>
+                <a href="#">Clough</a>
+                <a href="#">CRC</a>
+                <a href="#">Wardlaw</a>
+            </li>
+            <li ng-show="app.show== 'Departments'">
+                <a href="#">Admissions</a>
+                <a href="#">Digital Signage</a>
+                <a href="#">Parking and Transportation</a>
+                
+            </li>
+            <li ng-show="app.show== 'Buildings'">
+                <a href="#">Clough</a>
+                <a href="#">CRC</a>
+                <a href="#">Wardlaw</a>
+                
+            </li>
+        </ul>
+    </div>

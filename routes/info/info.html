@@ -1,9 +1,9 @@
 <div id="info" ng-controller="infoCtrl as info">
 
-        <div class="personal-info vline" ng-repeat="(data, list) in data">
-            <div class="img"><img ng-src="{{data.name.short}}" alt="profile pic"></div>
+        <div class="personal-info vline" ng-repeat="x in info.profiles">
+            <div class="img"><img ng-src="{{x.pic}}" alt="profile pic"></div>
             <div class="contact-info">
-                <h1>{{value.name.first}}</h1>
+                <h1>{{x.name.first}}</h1>
                 <div class="hline"></div>
                 <p><strong>Occupation:</strong> {{x.occupation}}</p>
                 <p><strong>Department:</strong> {{x.department}}</p>

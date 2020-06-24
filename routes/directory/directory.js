@@ -18,12 +18,25 @@
 		"dirCtrl",
 		function ($scope, $http) {
 			this.app = $scope.$parent.app;
-            var dir = this;
-        
-			
+			var dir = this;
+
+			window.onscroll = function () {
+				dir.onScroll()
+			  };
+  
+			  var header = document.getElementById("myHeader");
+			  var sticky = header.offsetTop;
+  
+			dir.onScroll = function () {
+				  if (window.pageYOffset > sticky) {
+					  header.classList.add("sticky");
+				  } else {
+					  header.classList.remove("sticky");
+				  }
+			  }
 
 			
-        });
+		});
 
 
 

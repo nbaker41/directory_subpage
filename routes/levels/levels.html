@@ -1,39 +1,48 @@
-<div class="room-info" ng-contoller="levCtrl as lev">
-
-  
+<div class="main" ng-controller="levCtrl as lev">
 
   <div id="Arrows">
-    <button id="Prev" aria-hidden="true">&#10094;</button><br />
-    <button id="Next" aria-hidden="true">&#10095;</button>
+      <button id="Prev" aria-hidden="true">&#10094;</button><br />
+      <button id="Next" aria-hidden="true">&#10095;</button>
   </div>
 
-
-    <!-- SLIDESHOW -->
-    <section id="sec1" >
-      
-     
-
+  <div id="sec1">
       <div class="slideshow">
-
-          <div class="slider map">
-            <map></map>
-            
-             
+          <div class="slider">
+              <floor></floor>
           </div>
-          
-
       </div>
-  </section>
+  </div>
 
+  <div id="sec2">
 
- <!-- ROOM INFO -->
- <section id="sec2" >
- 
-  <room-info></room-info>
+    <div class="directory">
 
-<!-- <label for="people">Faculty</label>
-<input type="radio" id="people" name="faculty" value="people"> -->
-</section>
+        <select id="roomsHeading" class="custom-select" ng-model="app.show">
+            <option value="All">All</option>
+            <option value="Departments">Departments</option>
+            <option value="Faculty">Faculty</option>
+        </select>
+    
+        <div class="scroll">
+            <ul class="rooms">
+                <li class="show" ng-show="app.show== 'All'" ng-repeat="x in app.faculty | filter: searchFaculty">
+                    <a href="#{{x.office.number}}">{{x.department.name}}</a>
+                    <a href="#{{x.office.number}}">{{x.name.full()}}</a>
+                </li>
+                <li class="show" ng-show="app.show== 'Departments'" ng-repeat="x in app.faculty | filter: searchFaculty">
+                    <a href="#{{x.office.number}}">{{x.department.name}}</a>
+                </li>
+                <li class="show" ng-show="app.show== 'Faculty'" ng-repeat="x in app.faculty | orderBy | filter: searchFaculty">
+                    <a href="#{{x.office.number}}">{{x.name.full()}}</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="search-container">
+            <input type="search" placeholder="search person or room" id="searchBox">
+        </div>
 
+    </div>
+  </div>
 
 </div>
