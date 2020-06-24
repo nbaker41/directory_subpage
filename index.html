@@ -13,11 +13,13 @@
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/hover/hover.css">
 <!-- AJS -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	
 <!-- Additional AJS Modules -->
 	<script src="assets/js/angularjs/ui.router.js"></script>
-	<script src="http://code.angularjs.org/1.2.9/angular-animate.min.js"></script>
+	<!-- <script src="http://code.angularjs.org/1.2.9/angular-animate.min.js"></script> -->
 
 	
 <!-- ----------------------------------------------------------------------------------------------- -->
@@ -27,28 +29,34 @@
 	<!-- <a ui-sref="info"> Open Me!   </a>
 	<a ui-sref="levels">  Levels  </a> -->
 	<sidebar></sidebar>
+
 	
 	<ui-view>
 		<!-- Route-specific html goes here. -->
-	</ui-view>
+	 </ui-view> 
+
+<tbar />
 
 </body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
 
 <!-- ------------------------------------------------------------------------------------------------->
 <!-- APP -->
 	<script src="app.js"></script>
 <!-- ROUTES -->
+<script src="routes/home/home.js"></script>
 	<script src="routes/info/info.js"></script>
 	<script src="routes/form/form.js"></script>
 	<script src="routes/levels/levels.js"></script>
 	<script src="routes/directory/directory.js"></script>
+	<script src="routes/campus/campus.js"></script>
 <!--COMPONENTS-->
 	<script src="components/sidebar/sidebar.js"></script>
 	<script src="components/floor/floor.js"></script>
+	<script src="components/tools/tbar.js"></script>
 <!-- DIRECTIVES -->
 <script src="directive/search/search.js"></script>
-<script src="directive/room-info/room.info.js"></script>
+<!-- <script src="directive/room-info/room.info.js"></script> -->
 
 
 
