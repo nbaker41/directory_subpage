@@ -34,11 +34,11 @@
       { name: 'Kristen McDowell', department:'Office of the Arts', room: 210},
     ];
     
-    $http.get("database/get_data.php")
-			.then(function (response)
-			{
-				info.direct = response.data.records;
-			})
+    // $http.get("database/get_data.php")
+		// 	.then(function (response)
+		// 	{
+		// 		info.direct = response.data.records;
+		// 	})
 
 	
 
