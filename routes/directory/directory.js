@@ -20,13 +20,16 @@
 			this.app = $scope.$parent.app;
 			var dir = this;
 
+
+
+			//Attach table Header to top when scrolling
 			window.onscroll = function () {
 				dir.onScroll()
 			  };
   
 			  var header = document.getElementById("myHeader");
 			  var sticky = header.offsetTop;
-  
+			
 			dir.onScroll = function () {
 				  if (window.pageYOffset > sticky) {
 					  header.classList.add("sticky");

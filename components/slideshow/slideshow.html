@@ -1,0 +1,15 @@
+<div id="slideshow">
+
+    <div class="slides">
+        <div class="floortext"></div>
+        <img ng-src="{{app.svg + 'floorplan-floor1.svg'" alt="">
+    </div>
+
+    <a class="prev" ng-click="slide.plusSlides(-1)">&#10094;</a>
+    <a class="next" ng-click="slide.plusSlides(1)">&#10095;</a>
+
+    <div>
+        <span class="numbers" ng-click="slide.currentSlide()"></span>
+        
+    </div>
+</div>

@@ -11,8 +11,9 @@
     width: 100%;
 
     @include for-phone-only {
-        align-content: flex-start;
-        flex: nowrap;
+        display:grid;
+        grid-template-rows: 50% auto;
+        grid-row-gap:.5em ;
 
     }
 
@@ -25,14 +26,22 @@
 
 
     #Arrows {
+        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 90%;
+        position: relative;
+        
 
         @include for-phone-only {
-            height: 50%;
-            justify-content: flex-start;
+            display:grid;
+            // height: 10vh;
+            width: 100%;
+            
+            // justify-content: space-evenly;
+            // align-self: flex-end;
+            // flex-direction: row;
+            // position:fixed;
         }
 
         @include for-tablet-portrait-up {
@@ -55,6 +64,7 @@
             @include for-phone-only {
                 width: 40px;
                 height: 40px;
+                transform:rotate(0deg);
             }
 
             @include for-tablet-portrait-up {
@@ -66,19 +76,19 @@
 
         }
 
-        #Prev {
-            top: 0;
+        // #Prev {
+        //     top: 0;
 
-        }
+        // }
 
-        #Next {
-            bottom: 0;
+        // #Next {
+        //     bottom: 0;
 
-        }
+        // }
     }
 
     #sec1 {
-        order: 0;
+       
         flex: 0 1 45%;
         align-self: center;
         justify-content: center;
@@ -88,10 +98,18 @@
         overflow: hidden;
 
         @include for-phone-only {
-            flex: 0 1 80%;
+            // order:0;
+            // flex: 0 1 80%;
             height: 50%;
-            margin-right: 0;
-            justify-self: center;
+            // margin-right: 0;
+            // justify-self: center;
+            // align-self:flex-start;
+            // position:absolute;
+            order:0;
+            position:fixed;
+            grid-row-start: 1;
+            grid-row-end:1;
+            
         }
 
         @include for-tablet-portrait-up {
@@ -128,12 +146,18 @@
     }
 
     #sec2 {
-        order: 1;
+        
         flex: 0 1 100vw;
         overflow: scroll;
-        align-self: center;
-        justify-content: center;
+        align-self: flex-end;
+        justify-content: flex-end;
         margin: 0 1em;
+
+        @include for-phone-only {
+            order: 1;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
 
     }
 }

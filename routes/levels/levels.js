@@ -26,15 +26,15 @@
             // } 
 
             
-				document.addEventListener("click", function(event){
-				// First, check to see if it was an anchor that was clicked
-				// in the document
-				if(event.target.nodeName === "A"){
-					// If so, add a class to the target 
-					// Get the href attribute and strip off the "#", then find that element and toggle the class
-				document.getElementById(event.target.getAttribute("href").replace("#","")).classList.toggle("active");
-				}
-				});
+				// document.addEventListener("click", function(event){
+				// // First, check to see if it was an anchor that was clicked
+				// // in the document
+				// if(event.target.nodeName === "A"){
+				// 	// If so, add a class to the target 
+				// 	// Get the href attribute and strip off the "#", then find that element and toggle the class
+				// document.getElementById(event.target.getAttribute("href").replace("#","")).classList.toggle("active");
+				// }
+				// });
             
            
               

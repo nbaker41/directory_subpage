@@ -1,24 +1,16 @@
-// $phone-sm : 360px;
-// $phone-md : 360px 375px;
-// $phone-lg : 375px 480px;
-// $laptop : 1200px 1600px;
-// $tablet-xs: 601px;
-// $tablet-sm : 768px 834px;
-// $tablet-lg : 1024px 1536px;
 
-
-// body{
-//     @include breakpoint($laptop) {
-//         content:'Hello';
-//     }
-// }
 @import 'mixins';
 
 @include for-phone-only {
 
-    html{
-        width:100vw;
+    *{
         color: #fff;
+        margin:0;
+        padding:0;
+
+
+        
+
 
         .hero{
             height: 30vh;
@@ -27,6 +19,7 @@
                 height:100%;
             }
         }
+        
 
         //home
         .sections{
@@ -171,6 +164,5 @@
     }
 
 
-    //Floorplan
     
 }

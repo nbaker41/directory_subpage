@@ -1,5 +1,5 @@
 <div id="info" ng-controller="infoCtrl as info">
-
+        <!-- Peronsal Info -->
         <div class="personal-info vline" ng-repeat="x in info.profiles">
             <div class="img"><img ng-src="{{x.pic}}" alt="profile pic"></div>
             <div class="contact-info">
@@ -15,6 +15,7 @@
             <div class="vertline"></div>
         </div>
         
+        <!-- Personal Bio -->
         <div class="bio" ng-repeat="x in info.profiles">
             <div class="text">
                 <h1>Bio</h1>
@@ -22,7 +23,7 @@
                 <p>Office Hours: <strong>2:00 - 3:00pm</strong></p>
             </div>
 
-
+            <!-- Link to Floorplans -->
             <div class="flooricon">
                 <a ui-sref="levels" class="hvr-bob"><img ng-src="{{app.images +'location.png'}}" alt=""></a>
             </div>
